@@ -1,0 +1,45 @@
+.conocenos-hero {
+  background: var(--black); padding: calc(var(--nav-h) + 64px) 0 56px;
+  position: relative; overflow: hidden;
+}
+.conocenos-hero::before {
+  content: ''; position: absolute; width: 600px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,106,0,0.14), transparent 65%);
+  top: -80px; right: -80px;
+}
+.conocenos-hero .section-ey { position: relative; }
+.conocenos-hero h1 {
+  font-family: var(--font-serif); font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900; color: var(--white); margin-bottom: 12px; position: relative;
+}
+.conocenos-hero h1 em { color: var(--orange); font-style: italic; }
+.conocenos-hero p { color: rgba(255,255,255,0.45); font-size: 0.95rem; position: relative; max-width: 480px; }
+
+.conocenos-about { padding: 80px 0; background: var(--white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.about-img img { width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius); }
+.about-text p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.8; margin-top: 14px; }
+.about-text p:first-of-type { margin-top: 16px; }
+
+.conocenos-valores { padding: 80px 0; background: var(--gray-100); }
+.valores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.valor { background: var(--white); padding: 28px 24px; border-radius: var(--radius); transition: var(--t); }
+.valor:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-4px); }
+.valor-icon { font-size: 1.8rem; display: block; margin-bottom: 14px; }
+.valor h3 { font-family: var(--font-serif); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.valor p { font-size: 0.82rem; color: var(--gray-600); line-height: 1.7; }
+
+.conocenos-coppel { padding: 80px 0; background: var(--white); }
+.coppel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.coppel-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+.coppel-list li { font-size: 0.9rem; font-weight: 500; color: var(--black); }
+.coppel-img img { width: 100%; max-width: 380px; margin: 0 auto; }
+
+@media (max-width: 900px) {
+  .about-grid, .coppel-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-img img { height: 280px; }
+  .valores-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .valores-grid { grid-template-columns: 1fr; }
+}
